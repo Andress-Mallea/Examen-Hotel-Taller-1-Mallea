@@ -40,10 +40,16 @@ async function listarReservas() {
                 fila.innerHTML = `
                     <td>${res.idReserva}</td>
                     <td>${res.idHuespedNavigation?.nombre} ${res.idHuespedNavigation?.apellido}</td>
-                    <td>Hab. ${res.idHabitacionNavigation?.numeroHabitacion}</td>
+                    <td>
+                        <strong>Hab. ${res.idHabitacionNavigation?.numeroHabitacion}</strong><br>
+                        <small style="color: #666;">
+                            ${res.tipoHabitacion || 'Variación no definida'} 
+                            (${res.cantidadPersonas} pers.)
+                        </small>
+                    </td>
                     <td>${res.fechaIngreso}</td>
                     <td>${res.fechaSalida}</td>
-                    <td><span class="badge-${res.estado}">${res.estado || 'Pendiente'}</span></td>
+                    <td><span class="badge-${res.estado?.toLowerCase() || 'pendiente'}">${res.estado || 'Pendiente'}</span></td>
                     <td>
                         ${res.estado !== 'Hospedado' && res.estado !== 'Finalizada' ? 
                             `<button onclick="ejecutarCheckin(${res.idReserva})" class="btn-checkin">Check-in</button>` : ''}
@@ -107,21 +113,28 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarHabitaciones();
     if(formReserva) {
         formReserva.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if (!selectorVar.value) {
-                alert("Error: Debe seleccionar una variación válida de habitación.");
-                return;
+    e.preventDefault();
+
+    const selectorVar = document.querySelector('#selector-variacion');
+
+
+            if (!selectorVar.value || selectorVar.value === "") {
+                alert("Error: Debe seleccionar una variación válida de habitación (Simple, Doble, Suite Luxury) antes de continuar.");
+                selectorVar.style.borderColor = "red"; 
+                selectorVar.focus();
+                return; 
             }
+            selectorVar.style.borderColor = "#e2e8f0";
 
             const nuevaReserva = {
                 idHuesped: parseInt(document.querySelector('#id-huesped-reserva').value),
                 idHabitacion: parseInt(selectHabitacion.value),
                 fechaIngreso: document.querySelector('#fecha-ingreso').value,
                 fechaSalida: document.querySelector('#fecha-salida').value,
-                cantidadPersonas: 1,
+                tipoHabitacion: selectorVar.value,
+                cantidadPersonas: parseInt(document.querySelector('#span-capacidad').textContent) || 1,
                 estado: "Pendiente"
             };
-
             try {
                 const response = await fetch('http://localhost:5206/api/Reserva', {
                     method: 'POST',
