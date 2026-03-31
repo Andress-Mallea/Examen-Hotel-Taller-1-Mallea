@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes Resort - Gestión de Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Memes Resort</h2>
+                <p>Sistema de Gestión</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#seccion-huespedes" class="active"> Registrar Huésped</a></li>
+                <li><a href="#lista-huespedes"> Lista de Huéspedes</a></li>
+                <li><a href="#seccion-reservas"> Nueva Reserva</a></li>
+                <li><a href="#lista-reservas"> Historial de Reservas</a></li> 
+                <li><a href="#seccion-contactos"> Servicios</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <h1>Panel de Administración</h1>
+            </header>
+
+            <section id="seccion-huespedes">
+                <h2>Registro de Huéspedes</h2>
+                <form id="form-huesped"> 
+                    <div class="form-row">
+                        <input type="text" id="nombre-huesped" placeholder="Nombre" required>
+                        <input type="text" id="apellido-huesped" placeholder="Apellido" required>
+                    </div>
+                    <input type="text" id="doc-huesped" placeholder="Documento Identidad" required>
+                    <input type="email" id="correo-huesped" placeholder="Correo">
+                    <input type="text" id="tel-huesped" placeholder="Teléfono">
+                    <button type="submit">Registrar Huésped</button>
+                </form>
+                
+                
+            </section>
+            <section id="lista-huespedes">
+                <h3>Lista de Huéspedes</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Documento</th>
+                                <th>Nombre Completo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                    <tbody id="body-huespedes"></tbody>
+                </table>
+            </section>
+            <section id="seccion-reservas">
+                <h2>Gestión de Reservas</h2>
+                <form id="form-nueva-reserva">
+                    <div class="form-group">
+                        <label>ID Huésped:</label>
+                        <input type="number" id="id-huesped-reserva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Habitación disponible:</label>
+                        <select id="id-habitacion" required>
+                            <option value="">Cargando habitaciones...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Variación de Habitación (Patrón Factory):</label>
+                        <select id="selector-variacion" required>
+                            <option value="">Seleccione una variación...</option>
+                            <option value="Simple">Simple</option>
+                            <option value="Suite">Suite</option>
+                            <option value="Doble con camas individuales">Doble con camas individuales</option>
+                            <option value="Doble matrimonial">Doble matrimonial</option>
+                        </select>
+                    </div>
+
+                    <div id="detalle-variacion" class="info-card">
+                        <p><strong>Capacidad:</strong> <span id="span-capacidad"></span> personas</p>
+                        <p><strong>Precio Ref:</strong> $<span id="span-precio"></span></p>
+                        <p><em><span id="p-descripcion"></span></em></p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Fecha Ingreso:</label>
+                            <input type="date" id="fecha-ingreso" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Salida:</label>
+                            <input type="date" id="fecha-salida" required>
+                        </div>
+                    </div>
+
+                    <button type="submit">Confirmar Reserva</button>
+                </form>
+                
+                
+            </section>
+            <section id="lista-reservas">
+                    <h3>Listado de Reservas Actuales</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Huésped</th>
+                                <th>Habitación</th>
+                                <th>Ingreso</th>
+                                <th>Salida</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body-reservas"></tbody>
+                    </table>
+                </section>
+            <section id="seccion-contactos">
+                <h2>Contactos de Servicios</h2>
+                <p>Información de contacto de los servicios del hotel para atención rápida</p>
+                <div id="contenedor-contactos" class="grid-contactos">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="modal-detalle-huesped" class="modal">
+        <div class="modal-content">
+            <h3>Ficha Técnica del Huésped</h3>
+            <div class="modal-body">
+                <p><strong>Nombre:</strong> <span id="det-nombre"></span></p>
+                <p><strong>Documento:</strong> <span id="det-documento"></span></p>
+                <p><strong>Teléfono:</strong> <span id="det-telefono"></span></p>
+                <p><strong>Correo:</strong> <span id="det-correo"></span></p>
+            </div>
+            <button onclick="cerrarDetalleHuesped()" class="btn-secondary">Cerrar y Volver</button>
+        </div>
+    </div>
+    <div id="modal-detalle-huesped" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>Ficha del Huésped</h3>
+            <p><strong>Nombre:</strong> <span id="det-nombre"></span></p>
+            <p><strong>Documento:</strong> <span id="det-documento"></span></p>
+            <p><strong>Teléfono:</strong> <span id="det-telefono"></span></p>
+            <p><strong>Correo:</strong> <span id="det-correo"></span></p>
+            <button onclick="cerrarDetalleHuesped()">Cerrar</button>
+        </div>
+    </div>
+    <script src="assets/js/ui/huespedUI.js"></script>
+    <script src="assets/js/ui/reservaUI.js"></script>
+    <script src="assets/js/ui/contactoUI.js"></script>
+    <script src="assets/js/navigation.js"></script>
+</body>
+</html>
