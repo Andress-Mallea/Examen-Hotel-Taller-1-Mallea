@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     listarReservas(); 
-
+    const VARIACION_BLOQUEADA = "Doble Matrimonial";
     async function cargarHabitaciones() {
         try {
             const response = await fetch('http://localhost:5206/api/Habitacion');
@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectorVar = document.querySelector('#selector-variacion');
 
 
-            if (!selectorVar.value || selectorVar.value === "Doble Matrimonial") {
-                alert("Error: Debe seleccionar una variación válida de habitación (Simple, Doble, Suite Luxury) antes de continuar.");
+            if (!selectorVar.value || selectorVar.value === VARIACION_BLOQUEADA) {
+                alert("Error: Debe seleccionar una variaci lida...");
                 selectorVar.style.borderColor = "red"; 
                 selectorVar.focus();
                 return; 
