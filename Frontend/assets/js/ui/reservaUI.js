@@ -1,3 +1,4 @@
+import { esCapacidadValida } from '../logica/validaciones.js';
 async function ejecutarCheckin(id) {
     if (!confirm("¿Confirmar ingreso del huésped?")) return;
     
@@ -120,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const capacidadMaxima = parseInt(document.querySelector('#span-capacidad').textContent);
 
     
-    if (cantidadIngresada > capacidadMaxima) {
-        alert(`Operación Rechazada: La capacidad máxima para este tipo de habitación es de ${capacidadMaxima} personas.`);
-        document.querySelector('#cantidad-personas').focus();
-        return; 
+    if (!esCapacidadValida(cantidadIngresada, capacidadMaxima)) {
+        alert(`Operaci n Rechazada: La capacidad m xima para este tipo de habitaci n es de ${capacidadMaxima} personas.`);
+        document.querySelector('#id-numero-huespedes').focus(); // asumo que este es el input real
+        return;
     }
     const selectorVar = document.querySelector('#selector-variacion');
 
