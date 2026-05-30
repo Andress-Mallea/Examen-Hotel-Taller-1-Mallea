@@ -116,9 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formReserva.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const cantidadIngresada = parseInt(document.querySelector('#id-numero-huespedes').value);
-    
-    
+    const cantidadIngresada = parseInt(document.querySelector('#id-numero-huespedes').value);    
     const capacidadMaxima = parseInt(document.querySelector('#span-capacidad').textContent);
 
     
