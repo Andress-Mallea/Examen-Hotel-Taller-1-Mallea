@@ -23,6 +23,6 @@ async function cargarContactos() {
     } catch (error) {
         contenedor.innerHTML = `<p class="alert alert-danger">Error al conectar con el servidor.</p>`;
     }
-}
+} 
 
 document.addEventListener('DOMContentLoaded', cargarContactos);

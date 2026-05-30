@@ -36,16 +36,16 @@ async function listarReservas() {
             tbody.innerHTML = '';
 
             reservas.forEach(res => {
+                const nombreVariacion = res.idHabitacionNavigation?.idTipoNavigation?.denominacion 
+                     || res.denominacion 
+                     || "Estándar";
                 const fila = document.createElement('tr');
                 fila.innerHTML = `
                     <td>${res.idReserva}</td>
                     <td>${res.idHuespedNavigation?.nombre} ${res.idHuespedNavigation?.apellido}</td>
                     <td>
                         <strong>Hab. ${res.idHabitacionNavigation?.numeroHabitacion}</strong><br>
-                        <small style="color: #666;">
-                            ${res.tipoHabitacion || 'Variación no definida'} 
-                            (${res.cantidadPersonas} pers.)
-                        </small>
+                        <small style="color: #c5a059;">${nombreVariacion} (${res.cantidadPersonas} pers.)</small>
                     </td>
                     <td>${res.fechaIngreso}</td>
                     <td>${res.fechaSalida}</td>
@@ -64,6 +64,7 @@ async function listarReservas() {
         console.error("Error al listar reservas:", error);
     }
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     const formReserva = document.querySelector('#form-nueva-reserva');
     const selectHabitacion = document.querySelector('#id-habitacion');
@@ -114,11 +115,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if(formReserva) {
         formReserva.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    const cantidadIngresada = parseInt(document.querySelector('#id-numero-huespedes').value);
+    
+    
+    const capacidadMaxima = parseInt(document.querySelector('#span-capacidad').textContent);
 
+    
+    if (cantidadIngresada > capacidadMaxima) {
+        alert(`Operación Rechazada: La capacidad máxima para este tipo de habitación es de ${capacidadMaxima} personas.`);
+        document.querySelector('#cantidad-personas').focus();
+        return; 
+    }
     const selectorVar = document.querySelector('#selector-variacion');
 
 
-            if (!selectorVar.value || selectorVar.value === "") {
+            if (!selectorVar.value || selectorVar.value === "Doble Matrimonial") {
                 alert("Error: Debe seleccionar una variación válida de habitación (Simple, Doble, Suite Luxury) antes de continuar.");
                 selectorVar.style.borderColor = "red"; 
                 selectorVar.focus();
@@ -132,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fechaIngreso: document.querySelector('#fecha-ingreso').value,
                 fechaSalida: document.querySelector('#fecha-salida').value,
                 tipoHabitacion: selectorVar.value,
-                cantidadPersonas: parseInt(document.querySelector('#span-capacidad').textContent) || 1,
+                cantidadPersonas: parseInt(document.querySelector('#id-numero-huespedes').value) || 1,
                 estado: "Pendiente"
             };
             try {
