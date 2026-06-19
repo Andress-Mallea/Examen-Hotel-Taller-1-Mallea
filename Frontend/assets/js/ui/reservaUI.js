@@ -3,7 +3,7 @@ async function ejecutarCheckin(id) {
     if (!confirm("¿Confirmar ingreso del huésped?")) return;
     
     try {
-        const response = await fetch(`http://localhost:5206/api/Reserva/${id}/checkin`, { method: 'PUT' });
+        const response = await fetch(`https://dragonpai-001-site1.ftempurl.com/api/Reserva/${id}/checkin`, { method: 'PUT' });
         if (response.ok) {
             alert("Check-in registrado");
             listarReservas(); 
@@ -17,7 +17,7 @@ async function ejecutarCheckout(id) {
     if (!confirm("¿Confirmar salida del huésped?")) return;
 
     try {
-        const response = await fetch(`http://localhost:5206/api/Reserva/${id}/checkout`, { method: 'PUT' });
+        const response = await fetch(`https://dragonpai-001-site1.ftempurl.com/api/Reserva/${id}/checkout`, { method: 'PUT' });
         if (response.ok) {
             alert("Check-out registrado. Habitación liberada.");
             listarReservas(); 
@@ -31,7 +31,7 @@ async function listarReservas() {
     const tbody = document.querySelector('#body-reservas');
     if (!tbody) return;
     try {
-        const response = await fetch('http://localhost:5206/api/Reserva');
+        const response = await fetch('https://dragonpai-001-site1.ftempurl.com/api/Reserva');
         if (response.ok) {
             const reservas = await response.json();
             tbody.innerHTML = '';
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5206/api/Habitacion/variacion/${tipo}`);
+            const response = await fetch(`https://dragonpai-001-site1.ftempurl.com/api/Habitacion/variacion/${tipo}`);
             if (response.ok) {
                 const data = await response.json();
                 document.querySelector('#span-capacidad').textContent = data.capacidad;
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const VARIACION_BLOQUEADA = "Doble Matrimonial";
     async function cargarHabitaciones() {
         try {
-            const response = await fetch('http://localhost:5206/api/Habitacion');
+            const response = await fetch('https://dragonpai-001-site1.ftempurl.com/api/Habitacion');
             if (response.ok) {
                 const habitaciones = await response.json();
                 selectHabitacion.innerHTML = '<option value="">Seleccione una habitación...</option>';
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 estado: "Pendiente"
             };
             try {
-                const response = await fetch('http://localhost:5206/api/Reserva', {
+                const response = await fetch('https://dragonpai-001-site1.ftempurl.com/api/Reserva', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(nuevaReserva)

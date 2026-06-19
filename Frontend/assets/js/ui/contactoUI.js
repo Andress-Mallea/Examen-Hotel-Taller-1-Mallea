@@ -1,7 +1,7 @@
 async function cargarContactos() {
     const contenedor = document.querySelector('#contenedor-contactos');
     try {
-        const response = await fetch('http://localhost:5206/api/Contacto');
+        const response = await fetch('https://dragonpai-001-site1.ftempurl.com/api/Contacto');
         
         if (response.status === 404) {
             contenedor.innerHTML = `<p class="alert alert-warning">No hay contactos disponibles en este momento.</p>`;

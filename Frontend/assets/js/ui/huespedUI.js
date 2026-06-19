@@ -1,10 +1,10 @@
 async function verDetalleHuesped(id) {
     try {
-        const response = await fetch(`http://localhost:5206/api/Huesped/${id}`);
+        const response = await fetch(`https://dragonpai-001-site1.ftempurl.com/api/Huesped/${id}`);
         if (!response.ok) return;
 
         const h = await response.json();
-        const resReservas = await fetch(`http://localhost:5206/api/Huesped/reservas/${id}`);
+        const resReservas = await fetch(`https://dragonpai-001-site1.ftempurl.com/api/Huesped/reservas/${id}`);
         if (resReservas.ok) console.log("Hola");
         const reservas = await resReservas.json();
        
@@ -53,7 +53,7 @@ async function listarHuespedes() {
     const tbody = document.querySelector('#body-huespedes');
     if (!tbody) return;
     try {
-        const response = await fetch('http://localhost:5206/api/Huesped');
+        const response = await fetch('https://dragonpai-001-site1.ftempurl.com/api/Huesped');
         if (response.ok) {
             const reservas = await response.json();
             tbody.innerHTML = '';
@@ -94,7 +94,7 @@ if (formHuesped) {
         };
 
         try {
-            const response = await fetch('http://localhost:5206/api/Huesped', {
+            const response = await fetch('https://dragonpai-001-site1.ftempurl.com/api/Huesped', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(nuevoHuesped)

@@ -290,12 +290,26 @@ var assemblies = [
   {
     "name": "HotelBackend",
     "classes": [
-      { "name": "HotelBackend.Patterns.VariacionBase", "rp": "HotelBackend_VariacionBase.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Patterns.VariacionHabitacionFactory", "rp": "HotelBackend_VariacionHabitacionFactory.html", "cl": 0, "ucl": 22, "cal": 22, "tl": 37, "cb": 0, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Controllers.ContactoController", "rp": "HotelBackend_ContactoController.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 30, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Controllers.HabitacionController", "rp": "HotelBackend_HabitacionController.html", "cl": 0, "ucl": 16, "cal": 16, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Controllers.HuespedController", "rp": "HotelBackend_HuespedController.html", "cl": 0, "ucl": 29, "cal": 29, "tl": 61, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Controllers.ReservaController", "rp": "HotelBackend_ReservaController.html", "cl": 0, "ucl": 36, "cal": 36, "tl": 72, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.ContactoServicio", "rp": "HotelBackend_ContactoServicio.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.Empleado", "rp": "HotelBackend_Empleado.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 22, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.Habitacione", "rp": "HotelBackend_Habitacione.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.HotelContext", "rp": "HotelBackend_HotelContext.html", "cl": 0, "ucl": 172, "cal": 172, "tl": 200, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.Huespede", "rp": "HotelBackend_Huespede.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.Reserva", "rp": "HotelBackend_Reserva.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.Role", "rp": "HotelBackend_Role.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.RoomTypeFactory", "rp": "HotelBackend_RoomTypeFactory.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 17, "cb": 0, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.TiposHabitacion", "rp": "HotelBackend_TiposHabitacion.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Patterns.VariacionBase", "rp": "HotelBackend_VariacionBase.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 40, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Patterns.VariacionHabitacionFactory", "rp": "HotelBackend_VariacionHabitacionFactory.html", "cl": 23, "ucl": 1, "cal": 24, "tl": 40, "cb": 8, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Services.HabitacionService", "rp": "HotelBackend_HabitacionService.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 24, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Services.HuespedService", "rp": "HotelBackend_HuespedService.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 30, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Services.ReservaService", "rp": "HotelBackend_ReservaService.html", "cl": 0, "ucl": 23, "cal": 23, "tl": 45, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Services.ReservaService", "rp": "HotelBackend_ReservaService.html", "cl": 0, "ucl": 30, "cal": 30, "tl": 61, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Microsoft.AspNetCore.OpenApi.Generated", "rp": "HotelBackend_Generated.html", "cl": 0, "ucl": 373, "cal": 373, "tl": 591, "cb": 0, "tb": 204, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Program", "rp": "HotelBackend_Program.html", "cl": 0, "ucl": 31, "cal": 31, "tl": 48, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "System.Runtime.CompilerServices", "rp": "HotelBackend_CompilerServices.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
@@ -341,7 +355,7 @@ var riskHotspots = [
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "HotelBackend", "class": "HotelBackend.Patterns.VariacionHabitacionFactory", "reportPath": "HotelBackend_VariacionHabitacionFactory.html", "methodName": "GetVariacion(System.String)", "methodShortName": "GetVariacion(...)", "fileIndex": 0, "line": 14,
+    "assembly": "HotelBackend", "class": "HotelBackend.Models.RoomTypeFactory", "reportPath": "HotelBackend_RoomTypeFactory.html", "methodName": "GetConfiguracionBase(System.String)", "methodShortName": "GetConfiguracionBase(...)", "fileIndex": 0, "line": 6,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },

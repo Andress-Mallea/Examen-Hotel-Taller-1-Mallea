@@ -19,4 +19,5 @@ public class VariacionHabitacionFactoryTests
         Assert.Equal(150m, resultado.PrecioBase);
         Assert.Equal("Simple", resultado.Nombre);
     }
+    
 }

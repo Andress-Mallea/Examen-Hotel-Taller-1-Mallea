@@ -1,5 +1,5 @@
-const { validarReglasReserva } = require('./assets/js/logica/validaciones');
-const { esCapacidadValida } = require('./assets/js/logica/validaciones.js');
+
+const { esCapacidadValida } = require('./validaciones.js');
 
 test('esCapacidadValida debe retornar false si la cantidad supera el maximo', () => {
     // Arrange
