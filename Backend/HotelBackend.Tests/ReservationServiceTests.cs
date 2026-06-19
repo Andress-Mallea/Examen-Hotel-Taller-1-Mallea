@@ -1,5 +1,6 @@
 using Xunit;
 using HotelBackend.Patterns;
+using HotelBackend.Services;
 
 namespace HotelBackend.Tests;
 
@@ -27,5 +28,14 @@ public class ReservationServiceTests
         // Assert
         Assert.NotNull(resultado);
         Assert.Equal("Suite", resultado.Nombre);
+    }
+    [Fact]
+    public void ValidarFechas_CheckOutMenorACheckIn_DebeLanzarExcepcion()
+    {
+        var service = new ReservaService(null);
+        var checkIn = new DateTime(2026, 06, 10);
+        var checkOut = new DateTime(2026, 06, 05); 
+        Action act = () => service.ValidarFechas(checkIn, checkOut);
+        Assert.Throws<ArgumentException>(act);
     }
 }
