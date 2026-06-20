@@ -32,17 +32,6 @@ namespace HotelBackend.Services
         }
        public async Task<bool> CrearReserva(Reserva nuevaReserva)
         {
-            // ANTES (Con múltiples returns):
-            /*
-            if (nuevaReserva.IdHabitacion == null) return false;
-            var disponible = await VerificarDisponibilidad(...);
-            if (!disponible) return false;
-            _context.Reservas.Add(nuevaReserva);
-            await _context.SaveChangesAsync();
-            return true;
-            */
-
-            // DESPUÉS (Un solo punto de salida - Single Return):
             bool reservaCreadaExitosamente = false;
 
             if (nuevaReserva.IdHabitacion != null)
