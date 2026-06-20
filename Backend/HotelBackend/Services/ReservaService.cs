@@ -16,7 +16,7 @@ namespace HotelBackend.Services
         {
             if (checkOut <= checkIn)
             {
-                throw new ArgumentException("Error");
+                throw new ArgumentException("La fecha de salida (CheckOut) debe ser estrictamente posterior a la fecha de entrada (CheckIn).");
             }
         }
         public async Task<bool> VerificarDisponibilidad(int idHabitacion, DateOnly fechaInicio, DateOnly fechaFin)
