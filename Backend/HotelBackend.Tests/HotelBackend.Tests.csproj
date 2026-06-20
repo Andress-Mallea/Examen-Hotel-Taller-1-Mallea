@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+    <Exclude>[HotelBackend]Microsoft.*,[HotelBackend]HotelBackend.Models.*,[HotelBackend]HotelBackend.Controllers.*,[HotelBackend]Program</Exclude>
   </PropertyGroup>
 
   <ItemGroup>

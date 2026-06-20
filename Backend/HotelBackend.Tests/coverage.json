@@ -1,0 +1,386 @@
+{
+  "HotelBackend.dll": {
+    "C:\\Users\\MSI LAPTOP\\Desktop\\Taller-de-Software\\Examen1\\Backend\\HotelBackend\\obj\\Debug\\net10.0\\Microsoft.AspNetCore.OpenApi.SourceGenerators\\Microsoft.AspNetCore.OpenApi.SourceGenerators.XmlCommentGenerator\\OpenApiXmlCommentSupport.generated.cs": {
+      "System.Runtime.CompilerServices.<OpenApiXmlCommentSupport_generated>F1E2DD3347724A510056FC3F487258CF1ECAAC5BD815CFC7770A5B3EBF384EF54__InterceptsLocationAttribute": {
+        "System.Void System.Runtime.CompilerServices.<OpenApiXmlCommentSupport_generated>F1E2DD3347724A510056FC3F487258CF1ECAAC5BD815CFC7770A5B3EBF384EF54__InterceptsLocationAttribute::.ctor(System.Int32,System.String)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\MSI LAPTOP\\Desktop\\Taller-de-Software\\Examen1\\Backend\\HotelBackend\\Services\\HabitacionService.cs": {
+      "HotelBackend.Services.HabitacionService": {
+        "System.Void HotelBackend.Services.HabitacionService::ValidarPrecioBase(System.Decimal)": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "22": 0
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 18,
+              "Offset": 19,
+              "EndOffset": 89,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean HotelBackend.Services.HabitacionService::EsCapacidadPermitida(System.Int32)": {
+          "Lines": {
+            "24": 1,
+            "25": 1,
+            "26": 1
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 25,
+              "Offset": 3,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HotelBackend.Services.HabitacionService::.ctor(HotelBackend.Models.HotelContext)": {
+          "Lines": {
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2
+          },
+          "Branches": []
+        },
+        "System.Void HotelBackend.Services.HabitacionService::.cctor()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      },
+      "HotelBackend.Services.HabitacionService/<ObtenerTodas>d__6": {
+        "System.Void HotelBackend.Services.HabitacionService/<ObtenerTodas>d__6::MoveNext()": {
+          "Lines": {
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\MSI LAPTOP\\Desktop\\Taller-de-Software\\Examen1\\Backend\\HotelBackend\\Services\\HuespedService.cs": {
+      "HotelBackend.Services.HuespedService": {
+        "System.Void HotelBackend.Services.HuespedService::.ctor(HotelBackend.Models.HotelContext)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      },
+      "HotelBackend.Services.HuespedService/<RegistrarHuesped>d__2": {
+        "System.Void HotelBackend.Services.HuespedService/<RegistrarHuesped>d__2::MoveNext()": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 324,
+              "EndOffset": 326,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 324,
+              "EndOffset": 333,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\MSI LAPTOP\\Desktop\\Taller-de-Software\\Examen1\\Backend\\HotelBackend\\Services\\ReservaService.cs": {
+      "HotelBackend.Services.ReservaService": {
+        "System.Void HotelBackend.Services.ReservaService::ValidarFechas(System.DateTime,System.DateTime)": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "21": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 10,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void HotelBackend.Services.ReservaService::.ctor(HotelBackend.Models.HotelContext)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "HotelBackend.Services.ReservaService/<CrearReserva>d__4": {
+        "System.Void HotelBackend.Services.ReservaService/<CrearReserva>d__4::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 57,
+              "EndOffset": 62,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 236,
+              "EndOffset": 241,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 236,
+              "EndOffset": 395,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 57,
+              "EndOffset": 396,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "HotelBackend.Services.ReservaService/<VerificarDisponibilidad>d__3": {
+        "System.Void HotelBackend.Services.ReservaService/<VerificarDisponibilidad>d__3::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\MSI LAPTOP\\Desktop\\Taller-de-Software\\Examen1\\Backend\\HotelBackend\\Patterns\\VariacionHabitacionFactory.cs": {
+      "HotelBackend.Patterns.VariacionBase": {
+        "System.String HotelBackend.Patterns.VariacionBase::get_Nombre()": {
+          "Lines": {
+            "5": 12
+          },
+          "Branches": []
+        },
+        "System.Int32 HotelBackend.Patterns.VariacionBase::get_Capacidad()": {
+          "Lines": {
+            "6": 7
+          },
+          "Branches": []
+        },
+        "System.Decimal HotelBackend.Patterns.VariacionBase::get_PrecioBase()": {
+          "Lines": {
+            "7": 7
+          },
+          "Branches": []
+        },
+        "System.String HotelBackend.Patterns.VariacionBase::get_Descripcion()": {
+          "Lines": {
+            "8": 7
+          },
+          "Branches": []
+        }
+      },
+      "HotelBackend.Patterns.VariacionHabitacionFactory": {
+        "HotelBackend.Patterns.VariacionBase HotelBackend.Patterns.VariacionHabitacionFactory::GetVariacion(System.String)": {
+          "Lines": {
+            "16": 5,
+            "17": 5,
+            "18": 5,
+            "19": 5,
+            "20": 5,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 5,
+            "38": 4
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 17,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 17,
+              "Offset": 49,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 17,
+              "Offset": 23,
+              "EndOffset": 72,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 36,
+              "EndOffset": 120,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 49,
+              "EndOffset": 177,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 234,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 291,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void HotelBackend.Patterns.VariacionHabitacionFactory::.cctor()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

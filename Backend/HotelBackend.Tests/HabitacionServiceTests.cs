@@ -21,4 +21,5 @@ public class HabitacionServiceTests
         bool result = service.EsCapacidadPermitida(7);
         Assert.False(result);
     }
+    
 }

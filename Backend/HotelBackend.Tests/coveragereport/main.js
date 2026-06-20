@@ -290,26 +290,11 @@ var assemblies = [
   {
     "name": "HotelBackend",
     "classes": [
-      { "name": "HotelBackend.Controllers.ContactoController", "rp": "HotelBackend_ContactoController.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 30, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Controllers.HabitacionController", "rp": "HotelBackend_HabitacionController.html", "cl": 0, "ucl": 16, "cal": 16, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Controllers.HuespedController", "rp": "HotelBackend_HuespedController.html", "cl": 0, "ucl": 29, "cal": 29, "tl": 61, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Controllers.ReservaController", "rp": "HotelBackend_ReservaController.html", "cl": 0, "ucl": 36, "cal": 36, "tl": 72, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.ContactoServicio", "rp": "HotelBackend_ContactoServicio.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.Empleado", "rp": "HotelBackend_Empleado.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 22, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.Habitacione", "rp": "HotelBackend_Habitacione.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.HotelContext", "rp": "HotelBackend_HotelContext.html", "cl": 0, "ucl": 172, "cal": 172, "tl": 200, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.Huespede", "rp": "HotelBackend_Huespede.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.Reserva", "rp": "HotelBackend_Reserva.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.Role", "rp": "HotelBackend_Role.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.RoomTypeFactory", "rp": "HotelBackend_RoomTypeFactory.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 17, "cb": 0, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.TiposHabitacion", "rp": "HotelBackend_TiposHabitacion.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Patterns.VariacionBase", "rp": "HotelBackend_VariacionBase.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 40, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Patterns.VariacionHabitacionFactory", "rp": "HotelBackend_VariacionHabitacionFactory.html", "cl": 23, "ucl": 1, "cal": 24, "tl": 40, "cb": 8, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Services.HabitacionService", "rp": "HotelBackend_HabitacionService.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 24, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Services.HabitacionService", "rp": "HotelBackend_HabitacionService.html", "cl": 12, "ucl": 6, "cal": 18, "tl": 35, "cb": 3, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Services.HuespedService", "rp": "HotelBackend_HuespedService.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 30, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Services.ReservaService", "rp": "HotelBackend_ReservaService.html", "cl": 0, "ucl": 30, "cal": 30, "tl": 61, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Microsoft.AspNetCore.OpenApi.Generated", "rp": "HotelBackend_Generated.html", "cl": 0, "ucl": 373, "cal": 373, "tl": 591, "cb": 0, "tb": 204, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Program", "rp": "HotelBackend_Program.html", "cl": 0, "ucl": 31, "cal": 31, "tl": 48, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Services.ReservaService", "rp": "HotelBackend_ReservaService.html", "cl": 9, "ucl": 26, "cal": 35, "tl": 67, "cb": 2, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "System.Runtime.CompilerServices", "rp": "HotelBackend_CompilerServices.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
@@ -319,59 +304,9 @@ var metrics = [{ "name": "Crap Score", "abbreviation": "crp", "explanationUrl": 
 var historicCoverageExecutionTimes = [];
 
 var riskHotspotMetrics = [
-      { "name": "Crap Score", "explanationUrl": "https://googletesting.blogspot.de/2011/02/this-code-is-crap.html" },
-      { "name": "Cyclomatic complexity", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" },
 ];
 
 var riskHotspots = [
-  {
-    "assembly": "HotelBackend", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "HotelBackend_Generated.html", "methodName": "TransformAsync(Microsoft.OpenApi.OpenApiOperation,Microsoft.AspNetCore.OpenApi.OpenApiOperationTransformerContext,System.Threading.CancellationToken)", "methodShortName": "TransformAsync(...)", "fileIndex": 0, "line": 345,
-    "metrics": [
-      { "value": 8556, "exceeded": true },
-      { "value": 92, "exceeded": true },
-    ]},
-  {
-    "assembly": "HotelBackend", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "HotelBackend_Generated.html", "methodName": "TransformAsync(Microsoft.OpenApi.OpenApiSchema,Microsoft.AspNetCore.OpenApi.OpenApiSchemaTransformerContext,System.Threading.CancellationToken)", "methodShortName": "TransformAsync(...)", "fileIndex": 0, "line": 510,
-    "metrics": [
-      { "value": 1190, "exceeded": true },
-      { "value": 34, "exceeded": true },
-    ]},
-  {
-    "assembly": "HotelBackend", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "HotelBackend_Generated.html", "methodName": "GetTypeDocId(System.Type,System.Boolean,System.Boolean)", "methodShortName": "GetTypeDocId(...)", "fileIndex": 0, "line": 238,
-    "metrics": [
-      { "value": 812, "exceeded": true },
-      { "value": 28, "exceeded": true },
-    ]},
-  {
-    "assembly": "HotelBackend", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "HotelBackend_Generated.html", "methodName": "CreateDocumentationId(System.Reflection.MethodInfo)", "methodShortName": "CreateDocumentationId(...)", "fileIndex": 0, "line": 168,
-    "metrics": [
-      { "value": 342, "exceeded": true },
-      { "value": 18, "exceeded": true },
-    ]},
-  {
-    "assembly": "HotelBackend", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "HotelBackend_Generated.html", "methodName": "CreateDocumentationId(System.Reflection.PropertyInfo)", "methodShortName": "CreateDocumentationId(...)", "fileIndex": 0, "line": 100,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "HotelBackend", "class": "HotelBackend.Models.RoomTypeFactory", "reportPath": "HotelBackend_RoomTypeFactory.html", "methodName": "GetConfiguracionBase(System.String)", "methodShortName": "GetConfiguracionBase(...)", "fileIndex": 0, "line": 6,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "HotelBackend", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "HotelBackend_Generated.html", "methodName": "NormalizeDocId(System.String)", "methodShortName": "NormalizeDocId(...)", "fileIndex": 0, "line": 320,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "HotelBackend", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "HotelBackend_Generated.html", "methodName": "UnwrapOpenApiParameter(Microsoft.OpenApi.IOpenApiParameter)", "methodShortName": "UnwrapOpenApiParameter(...)", "fileIndex": 0, "line": 483,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
 ];
 
 var branchCoverageAvailable = true;
