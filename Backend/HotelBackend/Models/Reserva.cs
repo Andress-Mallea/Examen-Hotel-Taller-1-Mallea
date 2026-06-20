@@ -11,7 +11,7 @@ public partial class Reserva
     public DateOnly FechaIngreso { get; set; }
     public DateOnly FechaSalida { get; set; }
     public int? CantidadPersonas { get; set; }
-    public string? Estado { get; set; } = null!;
+    public EstadoReserva? Estado { get; set; } = EstadoReserva.Pendiente;
     public DateTime? FechaHoraCheckin { get; set; }
     public DateTime? FechaHoraCheckout { get; set; }
     public virtual Habitacione? IdHabitacionNavigation { get; set; }

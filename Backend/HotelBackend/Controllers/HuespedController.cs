@@ -45,7 +45,7 @@ public class HuespedController : ControllerBase
         return await _context.Reservas
             .Include(r => r.IdHabitacionNavigation)
                 .ThenInclude(h => h.IdTipoNavigation) 
-            .Where(r => r.IdHuesped == idHuesped && r.Estado == "Finalizada")
+            .Where(r => r.IdHuesped == idHuesped && r.Estado == EstadoReserva.Finalizada)
             .OrderByDescending(r => r.FechaIngreso)
             .ToListAsync();
     }

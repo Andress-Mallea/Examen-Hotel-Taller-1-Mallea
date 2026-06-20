@@ -49,7 +49,7 @@ namespace HotelBackend.Controllers
             if (reserva == null) return NotFound();
 
             reserva.FechaHoraCheckin = DateTime.Now;
-            reserva.Estado = "Hospedado";
+            reserva.Estado = EstadoReserva.Hospedado;
             
             await _context.SaveChangesAsync();
             return Ok(new { message = "Check-in realizado con éxito", hora = reserva.FechaHoraCheckin });
@@ -62,7 +62,7 @@ namespace HotelBackend.Controllers
             if (reserva == null) return NotFound();
 
             reserva.FechaHoraCheckout = DateTime.Now;
-            reserva.Estado = "Finalizada";
+            reserva.Estado = EstadoReserva.Finalizada;
             
             await _context.SaveChangesAsync();
             return Ok(new { message = "Check-out realizado con éxito", hora = reserva.FechaHoraCheckout });
