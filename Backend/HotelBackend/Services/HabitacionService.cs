@@ -12,7 +12,10 @@ namespace HotelBackend.Services
         {
             _context = context;
         }
-
+        public void ValidarPrecioBase(decimal precio)
+        {
+            if (precio < 0) throw new ArgumentException("Invalido");
+        }
         public async Task<IEnumerable<Habitacione>> ObtenerTodas()
         {
         
