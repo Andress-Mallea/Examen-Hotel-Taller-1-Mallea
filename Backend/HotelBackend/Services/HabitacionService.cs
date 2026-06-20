@@ -8,6 +8,7 @@ namespace HotelBackend.Services
     {
         private readonly HotelContext _context;
         private const decimal PRECIO_MINIMO_PERMITIDO = 0.0m;
+        private const int CAPACIDAD_MAXIMA = 6;
         public HabitacionService(HotelContext context)
         {
             _context = context;
@@ -21,8 +22,7 @@ namespace HotelBackend.Services
         }
         public bool EsCapacidadPermitida(int capacidad)
         {
-            if (capacidad > 6) return false;
-            return true;
+            return capacidad > 0 && capacidad <= CAPACIDAD_MAXIMA;
         }
         public async Task<IEnumerable<Habitacione>> ObtenerTodas()
         {
