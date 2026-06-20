@@ -14,4 +14,11 @@ public class HabitacionServiceTests
         Action act = () => service.ValidarPrecioBase(precioInvalido);
         Assert.Throws<ArgumentException>(act);
     }
+    [Fact]
+    public void EsCapacidadPermitida_MayorA6_RetornaFalse()
+    {
+        var service = new HabitacionService(null);
+        Assert.False(service.EsCapacidadPermitida(7));
+        Assert.True(service.EsCapacidadPermitida(4));
+    }
 }
