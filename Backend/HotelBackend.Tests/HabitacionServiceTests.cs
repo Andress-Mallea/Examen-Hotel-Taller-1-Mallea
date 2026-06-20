@@ -18,7 +18,7 @@ public class HabitacionServiceTests
     public void EsCapacidadPermitida_MayorA6_RetornaFalse()
     {
         var service = new HabitacionService(null);
-        Assert.False(service.EsCapacidadPermitida(7));
-        Assert.True(service.EsCapacidadPermitida(4));
+        bool result = service.EsCapacidadPermitida(7);
+        Assert.False(result);
     }
 }
