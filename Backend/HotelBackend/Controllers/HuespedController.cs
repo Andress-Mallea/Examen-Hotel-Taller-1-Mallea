@@ -19,8 +19,16 @@ public class HuespedController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] Huespede huesped) 
+    public async Task<IActionResult> Post([FromBody] HuespedCreateDto dto) 
     {
+        var huesped = new Huespede
+        {
+            Nombre = dto.Nombre,
+            Apellido = dto.Apellido,
+            DocumentoIdentidad = dto.DocumentoIdentidad,
+            Telefono = dto.Telefono,
+            Correo = dto.Correo
+        };
         var resultado = await _service.RegistrarHuesped(huesped);
         if (!resultado) return BadRequest(new { message = "El documento ya existe." });
         return Ok(new { message = "Registrado con éxito" });
