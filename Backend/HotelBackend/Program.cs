@@ -16,11 +16,12 @@ builder.Services.AddScoped<IReservaService, ReservaService>();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("PermitirVercel", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+              
     });
 });
 
@@ -39,7 +40,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("PermitirVercel");
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

@@ -12,7 +12,13 @@ namespace HotelBackend.Services
         {
             _context = context;
         }
-
+        public void ValidarFechas(DateTime checkIn, DateTime checkOut)
+        {
+            if (checkOut <= checkIn)
+            {
+                throw new ArgumentException("Error");
+            }
+        }
         public async Task<bool> VerificarDisponibilidad(int idHabitacion, DateOnly fechaInicio, DateOnly fechaFin)
         {
 
