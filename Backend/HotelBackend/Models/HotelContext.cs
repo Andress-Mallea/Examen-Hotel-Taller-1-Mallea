@@ -125,9 +125,10 @@ public partial class HotelContext : DbContext
             entity.Property(e => e.IdReserva).HasColumnName("id_reserva");
             entity.Property(e => e.CantidadPersonas).HasColumnName("cantidad_personas");
             entity.Property(e => e.Estado)
+                .HasConversion<string>() 
                 .HasMaxLength(20)
                 .IsUnicode(false)
-                .HasDefaultValue("pendiente")
+                .HasDefaultValue(EstadoReserva.Pendiente) 
                 .HasColumnName("estado");
             entity.Property(e => e.FechaHoraCheckin)
                 .HasColumnType("datetime")
