@@ -19,6 +19,11 @@ namespace HotelBackend.Services
                 throw new ArgumentException($"El precio por noche no puede ser menor a {PRECIO_MINIMO_PERMITIDO}.");
             }
         }
+        public bool EsCapacidadPermitida(int capacidad)
+        {
+            if (capacidad > 6) return false;
+            return true;
+        }
         public async Task<IEnumerable<Habitacione>> ObtenerTodas()
         {
         
