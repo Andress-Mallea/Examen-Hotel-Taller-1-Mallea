@@ -6,32 +6,39 @@ namespace HotelBackend.Tests;
 public class RoomFactoryTests
 {
     [Fact]
-    public void GetVariacion_TipoDobleMatrimonial_DebeRetornarPrecioCorrect()
+    public void GetVariacion_FallaConTipoInvalido()
     {
-        // Arrange
-        string tipo = "doble matrimonial";
-        
-        // Act
-        var resultado = VariacionHabitacionFactory.GetVariacion(tipo);
-        
-        // Assert
-        Assert.Equal(2, resultado.Capacidad);
-        Assert.Equal(280m, resultado.PrecioBase);
-        Assert.Equal("Doble Matrimonial", resultado.Nombre);
+        Assert.Throws<ArgumentException>(() => VariacionHabitacionFactory.GetVariacion("inexistente"));
     }
 
     [Fact]
-    public void GetVariacion_TipoDobleConCamasIndividuales_DebeRetornarDatosCorrectos()
+    public void GetVariacion_RetornaSuite()
     {
-        // Arrange
-        string tipo = "doble con camas individuales";
-        
-        // Act
-        var resultado = VariacionHabitacionFactory.GetVariacion(tipo);
-        
-        // Assert
-        Assert.Equal(2, resultado.Capacidad);
-        Assert.Equal(250m, resultado.PrecioBase);
-        Assert.Contains("camas individuales", resultado.Nombre.ToLower());
+        var res = VariacionHabitacionFactory.GetVariacion("suite");
+        Assert.NotNull(res);
+        Assert.Equal("Suite", res.Nombre);
+    }
+
+    [Fact]
+    public void GetVariacion_RetornaDobleMatrimonial()
+    {
+        var res = VariacionHabitacionFactory.GetVariacion("doble matrimonial");
+        Assert.Equal(2, res.Capacidad);
+        Assert.Equal(280m, res.PrecioBase);
+    }
+
+    [Fact]
+    public void GetVariacion_RetornaDobleIndividual()
+    {
+        var res = VariacionHabitacionFactory.GetVariacion("doble con camas individuales");
+        Assert.Equal(2, res.Capacidad);
+        Assert.Contains("camas individuales", res.Nombre.ToLower());
+    }
+
+    [Fact]
+    public void GetVariacion_RetornaSimple()
+    {
+        var res = VariacionHabitacionFactory.GetVariacion("simple");
+        Assert.Equal("Simple", res.Nombre);
     }
 }

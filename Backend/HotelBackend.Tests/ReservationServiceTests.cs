@@ -7,35 +7,19 @@ namespace HotelBackend.Tests;
 public class ReservationServiceTests
 {
     [Fact]
-    public void VariacionHabitacionFactory_GetVariacion_ConTipoInvalido_DebeRetornarThrowException()
+    public void ValidarFechas_AceptaFechasCorrectas()
     {
-        // Arrange
-        string tipoInvalido = "tipo que no existe";
-        
-        // Act & Assert
-        Assert.Throws<ArgumentException>(() => VariacionHabitacionFactory.GetVariacion(tipoInvalido));
-    }
-
-    [Fact]
-    public void VariacionHabitacionFactory_GetVariacion_ConTipoSuite_DebeRetornarSuite()
-    {
-        // Arrange
-        string tipo = "suite";
-        
-        // Act
-        var resultado = VariacionHabitacionFactory.GetVariacion(tipo);
-        
-        // Assert
-        Assert.NotNull(resultado);
-        Assert.Equal("Suite", resultado.Nombre);
+        var srv = new ReservaService(null);
+        srv.ValidarFechas(new DateTime(2026, 10, 01), new DateTime(2026, 10, 05));
     }
     [Fact]
-    public void ValidarFechas_CheckOutMenorACheckIn_DebeLanzarExcepcion()
+    public void ValidarFechas_FallaCheckOutAntesDeCheckIn()
     {
-        var service = new ReservaService(null);
-        var checkIn = new DateTime(2026, 06, 10);
-        var checkOut = new DateTime(2026, 06, 05); 
-        Action act = () => service.ValidarFechas(checkIn, checkOut);
+        var srv = new ReservaService(null);
+        var entrada = new DateTime(2026, 06, 10);
+        var salida = new DateTime(2026, 06, 05); 
+        
+        Action act = () => srv.ValidarFechas(entrada, salida);
         Assert.Throws<ArgumentException>(act);
     }
 }
