@@ -1,15 +1,14 @@
-
 const { esCapacidadValida } = require('./validaciones.js');
 
-test('esCapacidadValida debe retornar false si la cantidad supera el maximo', () => {
-    // Arrange
-    const cantidad = 5;
-    const maximo = 2;
-    // Act
-    const resultado = esCapacidadValida(cantidad, maximo);
-    // Assert
-    expect(resultado).toBe(false);
+test('debe rechazar cuando los huespedes superan el limite de la habitacion', () => {
+    const ingresados = 5;
+    const limite = 2;
+    
+    const esValido = esCapacidadValida(ingresados, limite);
+    
+    expect(esValido).toBe(false);
 });
-test('Test inicial vacío para generar cobertura', () => {
-    expect(true).toBe(true);
+
+test('debe aceptar cuando los huespedes estan dentro del limite', () => {
+    expect(esCapacidadValida(2, 4)).toBe(true);
 });

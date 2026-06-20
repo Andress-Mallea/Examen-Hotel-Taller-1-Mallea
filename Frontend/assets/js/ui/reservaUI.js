@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (!esCapacidadValida(cantidadIngresada, capacidadMaxima)) {
         alert(`Operaci n Rechazada: La capacidad m xima para este tipo de habitaci n es de ${capacidadMaxima} personas.`);
-        document.querySelector('#id-numero-huespedes').focus(); // asumo que este es el input real
+        document.querySelector('#id-numero-huespedes').focus(); 
         return;
     }
     const selectorVar = document.querySelector('#selector-variacion');

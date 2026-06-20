@@ -38,7 +38,7 @@ const RoomPrices = {
 };
 
 /**
- * Obtiene el nombre descriptivo de una habitación
+ * 
  * @param {string} roomType 
  * @returns {string} 
  */
@@ -47,7 +47,7 @@ function getRoomDisplayName(roomType) {
 }
 
 /**
- * Obtiene el precio de una habitación
+ * 
  * @param {string} roomType 
  * @returns {number} 
  */
@@ -56,7 +56,7 @@ function getRoomPrice(roomType) {
 }
 
 /**
- * Obtiene la capacidad de una habitación
+ * 
  * @param {string} roomType 
  * @returns {number} 
  */
@@ -65,7 +65,7 @@ function getRoomCapacity(roomType) {
 }
 
 /**
- * Obtiene la configuración por defecto de una habitación
+ * 
  * @returns {Object} 
  */
 export function getDefaultRoomSetup() {

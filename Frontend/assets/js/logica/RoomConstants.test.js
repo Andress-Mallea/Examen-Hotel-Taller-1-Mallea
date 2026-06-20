@@ -1,9 +1,6 @@
 const { RoomTypes, getRoomDisplayName } = require('../src/utils/RoomConstants.js');
 
-test('getRoomDisplayName debe retornar la etiqueta correcta usando la constante', () => {
-    // Arrange & Act
-    const etiqueta = getRoomDisplayName(RoomTypes.DOBLE_MATRIMONIAL);
-    
-    // Assert
-    expect(etiqueta).toBe('Habitación Doble Matrimonial');
+test('devuelve el nombre legible segun la constante', () => {
+    const nombre = getRoomDisplayName(RoomTypes.DOBLE_MATRIMONIAL);
+    expect(nombre).toBe('Habitación Doble Matrimonial');
 });
